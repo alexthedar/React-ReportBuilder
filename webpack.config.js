@@ -2,20 +2,28 @@ const path = require('path');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
-
 const TARGET = process.env.npm_lifecycle_event;
+
 const PATHS = {
   app: path.join(__dirname, 'app'),
-  build: path.join(__dirname, 'build')
+  build: path.join(__dirname, 'build'),
+  library: path.join(__dirname, 'build/bundles'),
+  select: path.join(__dirname, 'app/select.jsx'),
+  display: path.join(__dirname, 'app/display.jsx'),
+  style: path.join(__dirname, 'app/main.css')
 };
 
 const common = {
   entry: {
-    app: PATHS.app
+    select: PATHS.display,
+    display: PATHS.index,
+    style: PATHS.style
   },
   output: {
-    path: PATHS.build,
-    filename: 'bundle.js'
+    path: PATHS.library,
+    filename: 'bundle.[name].js',
+    library: ['Bundles', '[name]'],
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [
