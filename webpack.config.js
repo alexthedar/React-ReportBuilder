@@ -10,7 +10,7 @@ process.env.BABEL_ENV = TARGET;
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build'),
-  index: path.join(__dirname, 'build/index.html'),
+  // index: path.join(__dirname, 'build/index.html'),
   // style: path.join(__dirname, 'app/main.css'),
   library: path.join(__dirname, 'build/bundles'),
   select: path.join(__dirname, 'app/select.jsx'),
@@ -55,6 +55,7 @@ if(TARGET === 'start' || !TARGET) {
   module.exports = merge(common, {
     devtool: 'eval-source-map',
     devServer: {
+      contentBase: PATHS.build,
       historyApiFallback: true,
       hot: true,
       inline: true,

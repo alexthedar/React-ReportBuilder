@@ -7,7 +7,8 @@
     "node-uuid": "^1.4.7",
     "react": "^15.0.2",
     "react-bootstrap": "^0.29.4",
-    "react-dom": "^15.0.2"
+    "react-dom": "^15.0.2",
+    "fixed-data-table": "jneiku/fixed-data-table#9617de14a14e2ece87590c6b118631755eff1fc8"
   },
   "devDependencies": {
     "babel-core": "^6.8.0",
