@@ -1,4 +1,3 @@
-import uuid from 'node-uuid';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Selectbox from './components/Selectbox.jsx';

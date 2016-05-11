@@ -4,9 +4,9 @@
   "description": "2 page app to select and display data from db",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^3.3.6",
     "node-uuid": "^1.4.7",
     "react": "^15.0.2",
+    "react-bootstrap": "^0.29.4",
     "react-dom": "^15.0.2"
   },
   "devDependencies": {
