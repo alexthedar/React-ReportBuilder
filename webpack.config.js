@@ -7,23 +7,29 @@ const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build'),
+  // style: path.join(__dirname, 'app/main.css'),
   library: path.join(__dirname, 'build/bundles'),
   select: path.join(__dirname, 'app/select.jsx'),
-  display: path.join(__dirname, 'app/display.jsx'),
-  style: path.join(__dirname, 'app/main.css')
+  display: path.join(__dirname, 'app/display.jsx')
 };
 
 const common = {
   entry: {
-    select: PATHS.display,
-    display: PATHS.index,
-    style: PATHS.style
+    select: PATHS.select,
+    display: PATHS.display
+    // app: PATHS.app,
+    // style: PATHS.style
+  },
+  resolve: {
+    extensions: ['','.js','.jsx']
   },
   output: {
-    path: PATHS.library,
+    // path: PATHS.build,
+    // filename: "bundle.js"
+   path: PATHS.library,
     filename: 'bundle.[name].js',
     library: ['Bundles', '[name]'],
-    libraryTarget: 'umd'
+  //   libraryTarget: 'umd'
   },
   module: {
     loaders: [
