@@ -1,8 +1,9 @@
+import uuid from 'node-uuid';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TablePage from './components/TablePage.jsx';
+import Displaybox from './components/Displaybox.jsx';
 
 ReactDOM.render(
-  <TablePage />,
+  <Displaybox />,
    document.getElementById('display')
   );

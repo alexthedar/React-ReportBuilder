@@ -1,8 +1,9 @@
+import uuid from 'node-uuid';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TablePage from './components/TablePage.jsx';
+import Selectbox from './components/Selectbox.jsx';
 
 ReactDOM.render(
-  <TablePage />,
+  <Selectbox />,
    document.getElementById('select')
   );
