@@ -1,3 +1,6 @@
 ##React Report
 
-This is a simple 2 page app which allows user to select a report and then display data in a table.
+*unfinished*
+
+Allows user to select report and then displays report in table.  
+Built to learn React system and test how well React handles building of dynamic tables.
